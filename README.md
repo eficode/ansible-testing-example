@@ -86,6 +86,10 @@ cat <<'EOF' > tasks/main.yml
 
 - name: start nginx
   shell: nginx
+  tags: skip_ansible_lint
+  register: start_nginx
+  failed_when: "start_nginx.rc != 0 and 'Address in use' not in start_nginx.stderr"
+  changed_when: false
 EOF
 ```
 
@@ -142,3 +146,4 @@ def test_hosts_file(host):
     assert "lollerskates" in f.content
 EOF
 ```
+Can you spot the error in provided test case?
