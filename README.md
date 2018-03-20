@@ -2,7 +2,17 @@
 
 It is a good practice to place roles into a public or private galaxy and automatically test that they work after every change.
 
+## Prerequisites
+- [Docker](https://www.docker.com/get-docker)
+- [Python](https://www.python.org/downloads/)
+- [Virtualenv](https://virtualenv.pypa.io/en/stable/installation/)
+
 ## Preparations
+Create and activate virtualenv
+```
+virtualenv venv
+source venv/bin/activate
+```
 Install Ansible and Molecule
 ```
 pip install -r requirements.txt
