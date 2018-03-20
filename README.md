@@ -17,7 +17,7 @@ Install Ansible and Molecule
 ```
 pip install -r requirements.txt
 ```
-## Getting started from nothing
+## Getting started with molecule
 
 ### Init role
 ```
