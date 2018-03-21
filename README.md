@@ -151,9 +151,14 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-def test_hosts_file(host):
+def test_index_file(host):
     f = host.file('/usr/share/nginx/html/index.html')
     assert "lollerskates" in f.content
 EOF
 ```
 Can you spot the error in provided test case?
+
+### Run tests
+```
+molecule verify
+```
